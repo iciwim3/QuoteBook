@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Quote Book View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuoteBookViewController" customModule="Quote_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,86 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_light" translatesAutoresizingMaskIntoConstraints="NO" id="lBt-u5-BGA">
+                                <rect key="frame" x="70.5" y="28" width="234" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="ebU-V2-F58"/>
+                                    <constraint firstAttribute="height" constant="70" id="kZo-Er-ncO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quotecard" translatesAutoresizingMaskIntoConstraints="NO" id="cdf-G0-Cu3">
+                                <rect key="frame" x="27.5" y="113" width="320" height="470"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="470" id="kJF-Ml-GO8"/>
+                                    <constraint firstAttribute="width" constant="320" id="rUe-5T-cdN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the button for inspiration!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJ1-S3-sjR">
+                                <rect key="frame" x="36" y="292" width="302" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="mtR-Kf-xRv"/>
+                                    <constraint firstAttribute="width" constant="302" id="sbN-xG-KaN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" red="0.98657888174057007" green="0.28034025430679321" blue="0.1941903829574585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb_steve" translatesAutoresizingMaskIntoConstraints="NO" id="Jo5-ej-aa6">
+                                <rect key="frame" x="27.5" y="487" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="6QK-IF-7Ik"/>
+                                    <constraint firstAttribute="width" constant="80" id="bNr-R3-LCf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steve Jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kes-Ai-1Zg">
+                                <rect key="frame" x="118" y="517" width="170" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="aql-en-ZLy"/>
+                                    <constraint firstAttribute="height" constant="21" id="nSw-UM-Ssa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.98657888174057007" green="0.28034025430679321" blue="0.1941903829574585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THz-TI-SfV">
+                                <rect key="frame" x="28" y="591" width="320" height="40"/>
+                                <color key="backgroundColor" red="0.98657888174057007" green="0.28034025430679321" blue="0.1941903829574585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="XRB-rn-b8s"/>
+                                    <constraint firstAttribute="height" constant="40" id="qqN-RV-zY6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Inspire Me">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61176470589999998" green="0.75686274509999996" blue="0.83137254900000002" alpha="0.61552868150684936" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="THz-TI-SfV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0n3-3I-nGY"/>
+                            <constraint firstItem="jJ1-S3-sjR" firstAttribute="centerX" secondItem="cdf-G0-Cu3" secondAttribute="centerX" id="8At-ye-a7r"/>
+                            <constraint firstItem="Jo5-ej-aa6" firstAttribute="top" secondItem="jJ1-S3-sjR" secondAttribute="bottom" constant="45" id="FCW-r0-vtA"/>
+                            <constraint firstItem="THz-TI-SfV" firstAttribute="top" secondItem="cdf-G0-Cu3" secondAttribute="bottom" constant="8" id="NKr-Hd-JSe"/>
+                            <constraint firstItem="Jo5-ej-aa6" firstAttribute="leading" secondItem="cdf-G0-Cu3" secondAttribute="leading" id="UXd-Sb-iAL"/>
+                            <constraint firstItem="cdf-G0-Cu3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X0o-qI-DIr"/>
+                            <constraint firstItem="lBt-u5-BGA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fjL-vq-eUo"/>
+                            <constraint firstItem="kes-Ai-1Zg" firstAttribute="top" secondItem="jJ1-S3-sjR" secondAttribute="bottom" constant="75" id="mb1-G7-qWP"/>
+                            <constraint firstItem="lBt-u5-BGA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="28" id="ofk-v6-c9z"/>
+                            <constraint firstItem="cdf-G0-Cu3" firstAttribute="top" secondItem="lBt-u5-BGA" secondAttribute="bottom" constant="15" id="u16-j1-m3O"/>
+                            <constraint firstItem="kes-Ai-1Zg" firstAttribute="leading" secondItem="Jo5-ej-aa6" secondAttribute="trailing" constant="10.5" id="wmX-ga-otK"/>
+                            <constraint firstItem="jJ1-S3-sjR" firstAttribute="top" secondItem="lBt-u5-BGA" secondAttribute="bottom" constant="194" id="zYZ-hw-6Za"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo_light" width="234" height="82"/>
+        <image name="quotecard" width="361" height="484"/>
+        <image name="thumb_steve" width="80" height="80"/>
+    </resources>
 </document>
